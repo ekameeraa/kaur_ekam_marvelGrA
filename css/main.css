@@ -1,0 +1,149 @@
+/* these all apply to the body element -> global rules */
+
+*{
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.hidden { display: none; }
+
+html, body { height: 100% }
+
+body { 
+  font-family: sans-serif;
+  background-color: black;
+  color: white;
+  background-image: url('../images/denim.png');
+}
+header{
+        background-color: red;
+        position:sticky;
+        top:0;
+        text-align: center;
+}
+
+#main-logo {width: 300px;padding: 10px 0;}
+ #character_nav{
+    text-align: center;
+    background-color: black;
+ }
+  .characters { list-style-type:  none; ;}
+.characters li { display: inline-block;}
+
+.characters li image{
+    width: 150px;
+    cursor: pointer;
+}
+article {
+    padding: 20px;
+}
+
+article h3{
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 14px;
+}
+article p {
+    width: 80%;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+footer{
+    color: white ;
+    padding: 20px 0;
+    text-align: center;
+}
+.stickey_footer{
+    position: sticky;
+    top:100%
+}
+
+.sprite {
+
+    width: 150px;
+    height: 150px;
+
+    background-image: url('../images/marvelSprites.jpg');
+}
+
+#carol {background-position: -150px 0;}
+#clint {background-position: -300px 0;}
+#hulk {background-position: -450px 0;}
+#thor {background-position: -600px 0;}
+#widow {background-position: -750px 0;}
+
+
+/* footer rules here */
+footer{
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.sticky_footer {
+    position: sticky;
+    top: 100px;
+
+    height: 80px;
+    background-color: rgb(40, 37, 37);
+}
+
+/*lightbox rules here */
+
+.lightbox {
+    width: 100vw; /* vw= viewpoint of width */
+    height: 100vh; /* vw= viewpoint of height */
+
+    position: absolute;
+    top: 0;
+    left: 0%;
+
+    background-color: rgba(0, 0, 0, 0.85);
+    background-image: url('../images/Cap_LB_Bg.png');
+    background-repeat:no-repeat;
+
+    background-size: 55vh; /* 55% of the viewport height*/
+    background-position: 40px bottom;
+
+
+    /*display: none; */
+}
+
+#lightbox2 { background-image: url('../images/Thor_LB_Bg.png');}
+
+.lightbox_close {
+    position: relative;
+    top: 20px;
+    left: 90px;
+
+    color: white;
+    font-size: 12px 8px;
+    
+   text-decoration: none;
+
+    font-weight: bolder;
+}
+
+.lightbox article {
+    width: 55%;
+    margin-left: 40%;
+    padding-top: 50px;
+}
+
+.lb_text, .lb_heading { text-align: left; }
+
+.lb_text {
+    line-height: 1.6 !important;
+    margin-left: 0;
+    padding-top: 2em;
+}
+
+/* turn the lightbox on using the :target pseudo selector*/
+.lightbox_:target { display: block;}
+
